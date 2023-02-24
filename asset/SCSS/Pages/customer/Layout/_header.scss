@@ -1,0 +1,13 @@
+header{
+    z-index: 2;
+    position: fixed;
+    height: 68px;
+    width: 100%;
+    nav.navbar{
+        background-color: $color-dark;
+    }
+    .navbar-brand{
+        letter-spacing: 5px;
+        font-size: 2rem;
+    }
+}

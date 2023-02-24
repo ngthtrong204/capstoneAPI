@@ -8,13 +8,15 @@
 
 
 //CUSTOMER
-    //Helper
+//Helper
 @import "./Pages/customer/Helper/mixins";
 @import "./Pages/customer/Helper/variables";
-    //Layout
+//Base
+@import "./Pages/customer/Base/customize";
+//Compoinents
+@import "./Pages/customer/Components/cart";
+//Layout
 @import "./Pages/customer/Layout/header";
 @import "./Pages/customer/Layout/service";
 @import "./Pages/customer/Layout/card";
 @import "./Pages/customer/Layout/footer";
-    //Compoinents
-@import "./Pages/customer/Components/cart";

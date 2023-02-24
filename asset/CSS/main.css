@@ -1,5 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@400;500;600;700;800&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html, body {
+  font-family: "Shantell Sans", cursive, sans-serif;
+}
+
+body {
+  background-color: #FEFBE9;
+  color: #212529;
+}
+
+.cart {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  line-height: 39px;
+  color: white;
+  border: 2px #183A1D solid;
+  border-radius: 5px;
+  background-color: #183A1D;
+  text-align: center;
+  font-size: 25px;
+}
+.cart #cart-number {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  line-height: 17px;
+  color: black;
+  border: solid 1px #F0A04B;
+  border-radius: 50%;
+  background-color: #F0A04B;
+  font-weight: 600;
+  top: 0%;
+  right: 0%;
+  font-size: 11px;
+}
+
+header {
+  z-index: 2;
+  position: fixed;
+  height: 68px;
+  width: 100%;
+}
+header nav.navbar {
+  background-color: #183A1D;
+}
+header .navbar-brand {
+  letter-spacing: 5px;
+  font-size: 2rem;
+}
+
+.services {
+  padding-top: 95px;
+  margin: 0 5vw 0;
+  width: 22vw;
+}
+.services select {
+  width: 100%;
+  background-color: #F0A04B;
+  border: none;
+}
+.services select:focus {
+  border: 2px solid #183A1D;
+  box-shadow: 0px 0px 0 #183A1D;
+}
+
+.Mycard button {
+  width: 40px;
+  height: 40px;
+  line-height: 39px;
+  color: white;
+  border: 2px #F0A04B solid;
+  border-radius: 5px;
+  background-color: #F0A04B;
+  text-align: center;
+  font-size: 25px;
+  transition: 0.2s;
+}
+.Mycard button:hover {
+  color: #F0A04B;
+  background-color: #212529;
 }/*# sourceMappingURL=main.css.map */
