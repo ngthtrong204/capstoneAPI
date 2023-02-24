@@ -116,8 +116,7 @@ header .navbar-brand {
 }
 .Mycard-number input::-webkit-inner-spin-button,
 .Mycard-number input ::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 .Mycard .typeInCard {
   border: 1px solid transparent;
