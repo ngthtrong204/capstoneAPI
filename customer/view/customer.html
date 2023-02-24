@@ -18,6 +18,7 @@
     <!-- <link rel="stylesheet" href="../../customer/test.css"> -->
 
 </head>
+
 <body>
     <!-- HEADER -->
     <header>
@@ -43,10 +44,10 @@
                             <a class="nav-link" href="../../admin/view/admin.html">ADMIN</a>
                         </li>
                         <li class="nav-item ">
-                            <button class="mx-2 cart">
+                            <button class="mx-2 cart  " data-bs-toggle="modal" data-bs-target="#modalId">
                                 <i class="fa fa-shopping-cart"></i>
                                 <!-- CART NUMBER -->
-                                <span id="cart-number">20</span>    
+                                <span id="cart-number">20</span>
                             </button>
                         </li>
                     </ul>
@@ -54,7 +55,7 @@
             </div>
         </nav>
     </header>
-    
+
     <!-- SERVICES -->
     <section class="  services">
         <div class="container">
@@ -69,29 +70,28 @@
     <section class="Mycard my-4">
         <div class="container">
             <div class="row">
-                <div class="Mycard-item col  col-xl-3 mb-4">
+                <div class="Mycard-item col-6   col-xl-3 mb-4">
                     <div class="card" style="width: 100%;">
-                        <img src="https://shopdunk.com/images/thumbs/0008734_iphone-14-pro-128gb.png"
-                            class="card-img-top">
-                        <div class="card-body">
-                            <!-- title -->
-                            <h5 class="card-title text-center">iPhone 14 Pro</h5>
-                        </div>
+                        <!-- image -->
+                        <img src="https://shopdunk.com/images/thumbs/0008734_iphone-14-pro-128gb.png">
+                        <!-- title -->
+                        <h5 class="text-center my-3">iPhone 14 Pro</h5>
+
                         <ul class="list-group list-group-flush">
                             <div class="d-flex justify-content-around align-items-center my-3">
-                                <p class="m-0" >$<span id="price">1000</span></p>
-                                <span>Apple</span>
+                                <!-- price -->
+                                <p>$<span id="price">1000</span></p>
+                                <!-- type brand -->
+                                <p><span class="typeInCard d-block">Apple</span></p>
                             </div>
                         </ul>
-                        <div class="card-body d-flex justify-content-between align-items-center">
-                            <!-- rate -->
-                            <div class="card-link d-flex">
-                                <button class="btn-more">+</button>
-                                <input type="text"
-                                id="">
-                               <button class="btn-less">-</button>
+                        <div class="my-3 mx-4 d-flex justify-content-between align-items-center">
+                            <div class="Mycard-number  d-flex">
+                                <button class="btn-more"><i class="fa fa-minus"></i></button>
+                                <input type="number" class="mx-1 text-center" id="" value="0">
+                                <button class="btn-less"><i class="fa fa-plus"></i></button>
                             </div>
-                            <button class="card-link "><i class="fa fa-plus"></i></button>
+                            <button class="Mycard-add "><i class="fa fa-cart-plus"></i></button>
                         </div>
                     </div>
                 </div>
@@ -100,6 +100,48 @@
             </div>
         </div>
     </section>
+    <!-- CART -->
+    <section class="cart-popup">
+
+        <div class="modal fade" id="modalId" tabindex="-1" role="dialog" aria-labelledby="modalTitleId"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitleId">Cart</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn " data-bs-dismiss="modal">Close</button>
+                        <button class="btn ">Claer</button>
+                        <button class="btn ">Pay</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        var modalId = document.getElementById('modalId');
+
+        modalId.addEventListener('show.bs.modal', function (event) {
+            // Button that triggered the modal
+            let button = event.relatedTarget;
+            // Extract info from data-bs-* attributes
+            let recipient = button.getAttribute('data-bs-whatever');
+
+            // Use above variables to manipulate the DOM
+        });
+    </script>
+
+
+
+
     <!-- FOOTER -->
     <footer>
         <!-- social-->

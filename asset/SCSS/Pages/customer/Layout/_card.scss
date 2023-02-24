@@ -1,6 +1,6 @@
 .Mycard {
 
-    button{
+    &-add{
         $border: 2px $color-yellow solid;
         @include button(40px,39px,white,$border,5px,$color-yellow);
         text-align: center;
@@ -10,7 +10,33 @@
             color: $color-yellow;
             background-color: $color-black;
         }
-
     }
 
+    &-number{
+        width: 50%;
+        $height-box:30px;
+        button{
+            $boder:1px solid transparent;
+            @include button($height-box,$height-box,$color-black,$boder,5px,$color-grey);
+            font-size: 13px;
+        }
+        input{
+            $border:1px solid transparent;
+            @include button($height-box,0,$color-black,$border,0px,white);
+            width: 20%;
+
+            &::-webkit-inner-spin-button,
+            ::-webkit-outer-spin-button {
+              appearance: none;
+            }
+        }
+       
+    }
+    .typeInCard{
+        border: 1px solid transparent;
+        padding: 2px 8px;
+        border-radius: 5px;
+        background-color: $color-grey;
+
+    }
 }

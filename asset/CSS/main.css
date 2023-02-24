@@ -14,6 +14,11 @@ body {
   color: #212529;
 }
 
+p {
+  margin: 0;
+  padding: 0;
+}
+
 .cart {
   position: relative;
   width: 40px;
@@ -70,7 +75,7 @@ header .navbar-brand {
   box-shadow: 0px 0px 0 #183A1D;
 }
 
-.Mycard button {
+.Mycard-add {
   width: 40px;
   height: 40px;
   line-height: 39px;
@@ -82,7 +87,41 @@ header .navbar-brand {
   font-size: 25px;
   transition: 0.2s;
 }
-.Mycard button:hover {
+.Mycard-add:hover {
   color: #F0A04B;
   background-color: #212529;
+}
+.Mycard-number {
+  width: 50%;
+}
+.Mycard-number button {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  color: #212529;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: #E1EEDD;
+  font-size: 13px;
+}
+.Mycard-number input {
+  width: 30px;
+  height: 30px;
+  line-height: 0;
+  color: #212529;
+  border: 1px solid transparent;
+  border-radius: 0px;
+  background-color: white;
+  width: 20%;
+}
+.Mycard-number input::-webkit-inner-spin-button,
+.Mycard-number input ::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+}
+.Mycard .typeInCard {
+  border: 1px solid transparent;
+  padding: 2px 8px;
+  border-radius: 5px;
+  background-color: #E1EEDD;
 }/*# sourceMappingURL=main.css.map */
