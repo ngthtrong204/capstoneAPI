@@ -16,6 +16,18 @@
         
     }
 }
-// .cart-popup{
-
-// }
+.cart-popup{
+    &-info{
+        width: 50%;
+    }
+    // &-item{
+    // }
+    &-number{
+        @include plusMinus(50%,30px)
+    }
+    &-btn{
+        button{
+            border: 1px solid $color-black
+        }
+    }
+}

@@ -13,10 +13,10 @@
 @import "./Pages/customer/Helper/variables";
 //Base
 @import "./Pages/customer/Base/customize";
-//Compoinents
-@import "./Pages/customer/Components/cart";
 //Layout
 @import "./Pages/customer/Layout/header";
 @import "./Pages/customer/Layout/service";
 @import "./Pages/customer/Layout/card";
 @import "./Pages/customer/Layout/footer";
+//Components
+@import "./Pages/customer/Components/cart";

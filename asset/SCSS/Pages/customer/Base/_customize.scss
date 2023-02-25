@@ -11,3 +11,19 @@ p{
     margin: 0;
     padding: 0;
 }
+
+$color-colection: (
+    "black":$color-black,
+    "dark":$color-dark,
+    "light":$color-light,
+    "yellow":$color-yellow,
+    "grey":$color-grey
+);
+@each $coler, $value in $color-colection{
+    .color-#{$coler}{
+        color: $value;
+    }
+    .bg-color-#{$coler}{
+        background-color: $value;
+    }
+}

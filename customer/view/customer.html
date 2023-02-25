@@ -34,17 +34,17 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                     <ul class="navbar-nav">
-                        <li class="nav-item mx-5">
+                        <li class="nav-item mx-lg-5">
                             <a class="nav-link " href="../../index.html">HOME</a>
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link active" href="#">CUSTOMER</a>
                         </li>
-                        <li class="nav-item mx-5">
+                        <li class="nav-item mx-lg-5">
                             <a class="nav-link" href="../../admin/view/admin.html">ADMIN</a>
                         </li>
                         <li class="nav-item ">
-                            <button class="mx-2 cart  " data-bs-toggle="modal" data-bs-target="#modalId">
+                            <button class="mx-2 cart d-none d-lg-block " data-bs-toggle="modal" data-bs-target="#modalId">
                                 <i class="fa fa-shopping-cart"></i>
                                 <!-- CART NUMBER -->
                                 <span id="cart-number">20</span>
@@ -58,22 +58,27 @@
 
     <!-- SERVICES -->
     <section class="  services">
-        <div class="container">
+        <div class="container d-flex d-lg-block justify-content-between ">
             <select class="form-select " aria-label="Default select example">
                 <option selected>All brand</option>
                 <option value="samsung">Samsung</option>
                 <option value="iphone">iPhone</option>
             </select>
+            <button class="mx-2  cart d-lg-none pe-3 ps-1 p-lg-0" data-bs-toggle="modal" data-bs-target="#modalId">
+                <i class="fa fa-shopping-cart"></i>
+                <!-- CART NUMBER -->
+                <span id="cart-number">20</span>
+            </button>
         </div>
     </section>
     <!-- CARD -->
     <section class="Mycard my-4">
         <div class="container">
             <div class="row">
-                <div class="Mycard-item col-6   col-xl-3 mb-4">
+                <div class="Mycard-item col-6 col-md-4  col-lg-3 mb-4">
                     <div class="card" style="width: 100%;">
                         <!-- image -->
-                        <img src="https://shopdunk.com/images/thumbs/0008734_iphone-14-pro-128gb.png">
+                        <img src="https://shopdunk.com/images/thumbs/0008734_iphone-14-pro-128gb.png" class="round w-75 mx-auto d-block p-2">
                         <!-- title -->
                         <h5 class="text-center my-3">iPhone 14 Pro</h5>
 
@@ -95,6 +100,31 @@
                         </div>
                     </div>
                 </div>
+                <div class="Mycard-item col-6 col-md-4  col-lg-3 mb-4">
+                    <div class="card" style="width: 100%;">
+                        <!-- image -->
+                        <img src="https://tanvoishop.com/files/sanpham/36/2/jpg/samsung-galaxy-a10s.jpg"  class="round w-75 mx-auto d-block p-2">
+                        <!-- title -->
+                        <h5 class="text-center my-3">Samsung Galaxy A10s</h5>
+
+                        <ul class="list-group list-group-flush">
+                            <div class="d-flex justify-content-around align-items-center my-3">
+                                <!-- price -->
+                                <p>$<span id="price">10000</span></p>
+                                <!-- type brand -->
+                                <p><span class="typeInCard d-block">Samsung</span></p>
+                            </div>
+                        </ul>
+                        <div class="my-3 mx-4 d-flex justify-content-between align-items-center">
+                            <div class="Mycard-number  d-flex">
+                                <button class="btn-more"><i class="fa fa-minus"></i></button>
+                                <input type="number" class="mx-1 text-center" id="" value="0">
+                                <button class="btn-less"><i class="fa fa-plus"></i></button>
+                            </div>
+                            <button class="Mycard-add "><i class="fa fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
 
 
             </div>
@@ -102,7 +132,6 @@
     </section>
     <!-- CART -->
     <section class="cart-popup">
-
         <div class="modal fade" id="modalId" tabindex="-1" role="dialog" aria-labelledby="modalTitleId"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -111,14 +140,30 @@
                         <h5 class="modal-title" id="modalTitleId">Cart</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body cart-popup-body">
                         <div class="container-fluid">
+                            
+                            <div class="d-flex cart-popup-item mb-3">
+                                <img class="w-25 me-3" src="https://shopdunk.com/images/thumbs/0008734_iphone-14-pro-128gb.png">
+                                <div class="cart-popup-info d-flex flex-column my-auto align-items-left">
+                                    <h5 class="m-0">iPhone 14 Pro</h5>
+                                    <p class="my-2">Giá: $1000</p>    
+                                    <div class="cart-popup-number  d-flex">
+                                        <button class="btn-more"><i class="fa fa-minus"></i></button>
+                                        <input type="number" class="mx-1 text-center" id="" value="0">
+                                        <button class="btn-less"><i class="fa fa-plus"></i></button>
+                                    </div>
+                                </div>
+                                <p class="d-flex align-items-center w-25">Tổng:  <span>1000</span></p>
+                            </div>
+                            
+                            
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <button class="btn " data-bs-dismiss="modal">Close</button>
-                        <button class="btn ">Claer</button>
-                        <button class="btn ">Payy</button>
+                    <div class="modal-footer cart-popup-btn">
+                        <button class="btn bg-color-black color-grey" data-bs-dismiss="modal">Close</button>
+                        <button class="btn bg-color-dark color-grey">Clear</button>
+                        <button class="btn bg-color-yellow">Pay</button>
                     </div>
                 </div>
             </div>
