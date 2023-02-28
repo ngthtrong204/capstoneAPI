@@ -13,21 +13,45 @@
         top: 0%;
         right: 0%;
         font-size: 11px;
-        
     }
 }
-.cart-popup{
-    &-info{
-        width: 50%;
+.cart-popup {
+    &-item {
+        img {
+            width: 30%;
+            margin: 0;
+        }
+        & > div {
+            width: 55%;
+        }
+        & > p {
+            width: 15%;
+            button {
+                $border: solid 1px $color-yellow;
+                @include button(30px, 30px, white, $border, 5px, rgb(194, 70, 70));
+                transition: .3s;
+                &:hover{
+                    color: rgb(194, 70, 70);
+                    background-color: white;
+                }
+            }
+        }
     }
-    // &-item{
-    // }
-    &-number{
-        @include plusMinus(50%,30px)
+
+    &-number {
+        @include plusMinus(100%, 30px);
     }
-    &-btn{
-        button{
-            border: 1px solid $color-black
+}
+@include responsive("lg"){
+    .cart-popup {
+        &-item {
+           
+            & > div {
+                width: 40%;
+            }
+            & > p {
+                width: 30%;
+            }
         }
     }
 }

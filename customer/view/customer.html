@@ -44,7 +44,8 @@
                             <a class="nav-link" href="../../admin/view/admin.html">ADMIN</a>
                         </li>
                         <li class="nav-item ">
-                            <button class="mx-2 cart d-none d-lg-block " data-bs-toggle="modal" data-bs-target="#modalId">
+                            <button class="mx-2 cart d-none d-lg-block " data-bs-toggle="modal"
+                                data-bs-target="#modalId">
                                 <i class="fa fa-shopping-cart"></i>
                                 <!-- CART NUMBER -->
                                 <span id="cart-number">20</span>
@@ -75,13 +76,22 @@
     <section class="Mycard my-4">
         <div class="container">
             <div class="row">
+
+
+                <!-------------------------  Item----------------------------->
                 <div class="Mycard-item col-6 col-md-4  col-lg-3 mb-4">
                     <div class="card" style="width: 100%;">
-                        <!-- image -->
-                        <img src="https://shopdunk.com/images/thumbs/0008734_iphone-14-pro-128gb.png" class="round w-75 mx-auto d-block p-2">
-                        <!-- title -->
-                        <h5 class="text-center my-3">iPhone 14 Pro</h5>
-
+                        <div class="Mycard-body">
+                            <div class="Mycard-body-describe">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, in nemo! Assumenda
+                                    harum corrupti esse.</p>
+                            </div>
+                            <!-- image -->
+                            <img src="https://shopdunk.com/images/thumbs/0008734_iphone-14-pro-128gb.png"
+                                class="round w-75 mx-auto d-block p-2">
+                            <!-- title -->
+                            <h5 class="text-center my-3">iPhone 14 Pro</h5>
+                    </div>
                         <ul class="list-group list-group-flush">
                             <div class="d-flex justify-content-around align-items-center my-3">
                                 <!-- price -->
@@ -90,7 +100,7 @@
                                 <p><span class="typeInCard d-block">Apple</span></p>
                             </div>
                         </ul>
-                        <div class="my-3 mx-4 d-flex justify-content-between align-items-center">
+                        <div class="my-3 mx-sm-4 mx-2 d-flex justify-content-between align-items-center">
                             <div class="Mycard-number  d-flex">
                                 <button class="btn-more"><i class="fa fa-minus"></i></button>
                                 <input type="number" class="mx-1 text-center" id="" value="0">
@@ -100,13 +110,20 @@
                         </div>
                     </div>
                 </div>
+                <!-------------------------  Item----------------------------->
                 <div class="Mycard-item col-6 col-md-4  col-lg-3 mb-4">
                     <div class="card" style="width: 100%;">
-                        <!-- image -->
-                        <img src="https://tanvoishop.com/files/sanpham/36/2/jpg/samsung-galaxy-a10s.jpg"  class="round w-75 mx-auto d-block p-2">
-                        <!-- title -->
-                        <h5 class="text-center my-3">Samsung Galaxy A10s</h5>
-
+                        <div class="Mycard-body">
+                                <div class="Mycard-body-describe">
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, in nemo! Assumenda
+                                        harum corrupti esse.</p>
+                                </div>
+                                <!-- image -->
+                                <img src="https://tanvoishop.com/files/sanpham/36/2/jpg/samsung-galaxy-a10s.jpg"
+                                    class="round w-75 mx-auto d-block p-2">
+                                <!-- title -->
+                                <h5 class="text-center my-3">Samsung Galaxy A10s</h5>
+                        </div>
                         <ul class="list-group list-group-flush">
                             <div class="d-flex justify-content-around align-items-center my-3">
                                 <!-- price -->
@@ -115,9 +132,9 @@
                                 <p><span class="typeInCard d-block">Samsung</span></p>
                             </div>
                         </ul>
-                        <div class="my-3 mx-4 d-flex justify-content-between align-items-center">
+                        <div class="my-3 mx-sm-4 mx-2 d-flex justify-content-between align-items-center">
                             <div class="Mycard-number  d-flex">
-                                <button class="btn-more"><i class="fa fa-minus"></i></button>
+                                <button class="btn-more" disabled><i class="fa fa-minus"></i></button>
                                 <input type="number" class="mx-1 text-center" id="" value="0">
                                 <button class="btn-less"><i class="fa fa-plus"></i></button>
                             </div>
@@ -142,22 +159,26 @@
                     </div>
                     <div class="modal-body cart-popup-body">
                         <div class="container-fluid">
-                            
+
                             <div class="d-flex cart-popup-item mb-3">
-                                <img class="w-25 me-3" src="https://shopdunk.com/images/thumbs/0008734_iphone-14-pro-128gb.png">
-                                <div class="cart-popup-info d-flex flex-column my-auto align-items-left">
+                                <img class=" me-sm-3"
+                                    src="https://shopdunk.com/images/thumbs/0008734_iphone-14-pro-128gb.png">
+                                <div class=" d-flex flex-column my-auto align-items-left">
                                     <h5 class="m-0">iPhone 14 Pro</h5>
-                                    <p class="my-2">Giá: $1000</p>    
+                                    <p class="my-2">Giá: $1000</p>
                                     <div class="cart-popup-number  d-flex">
                                         <button class="btn-more"><i class="fa fa-minus"></i></button>
                                         <input type="number" class="mx-1 text-center" id="" value="0">
                                         <button class="btn-less"><i class="fa fa-plus"></i></button>
                                     </div>
                                 </div>
-                                <p class="d-flex align-items-center w-25">Tổng:  <span>1000</span></p>
+                                <p class="d-lg-flex my-auto  align-items-center">Tổng:
+                                    <span class="my-2 mx-lg-1 d-block">1000</span> 
+                                    <button><i class="fa fa-trash-alt"></i></button>
+                                </p>
                             </div>
-                            
-                            
+
+
                         </div>
                     </div>
                     <div class="modal-footer cart-popup-btn">

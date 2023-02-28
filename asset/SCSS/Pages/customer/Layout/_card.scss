@@ -6,6 +6,30 @@
             height: 40px;
         }
     }
+    &-body{
+        $transition:.4s;
+        $bg-color:rgba(255, 255, 255, 0.648);
+        position: relative;
+        overflow: hidden;
+        transition: $transition;
+        &-describe{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            transform: scale(0) ;
+            background-color: $bg-color;
+            transition: $transition;
+        }
+        &:hover &-describe{
+            transform: scale(1);
+
+        }
+      
+    }
     &-add{
         $border: 2px $color-yellow solid;
         @include button(40px,39px,white,$border,5px,$color-yellow);
@@ -28,27 +52,3 @@
         background-color: $color-grey;
     }
 }
-// @include responsive("sm"){
-//     .Mycard{
-
-//         .card{
-//             h5{
-//                 // font-size: 2vw;
-//                 height: auto;
-
-//             }
-//         }
-//     }
-// }
-// @include responsive("md"){
-//     .Mycard{
-
-//         .card{
-//             h5{
-//                 font-size:1.25rem;
-//                 // height: auto;
-
-//             }
-//         }
-//     }
-// }
