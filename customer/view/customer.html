@@ -83,60 +83,29 @@
     <!-- CARD -->
     <section class="Mycard my-4">
         <div class="container">
-            <div class="row">
+            <div class="row" id="mainContent">
 
 
                 <!-------------------------  Item----------------------------->
                 <div class="Mycard-item col-6 col-md-4  col-lg-3 mb-4">
                     <div class="card" style="width: 100%;">
                         <div class="Mycard-body">
-
-
-
                             <div class="Mycard-body-describe">
                                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, in nemo! Assumenda
                                     harum corrupti esse.</p>
                             </div>
-
-
-
-
-
                             <!-- image -->
                             <img src="https://shopdunk.com/images/thumbs/0008734_iphone-14-pro-128gb.png"
                                 class="round w-75 mx-auto d-block p-2">
-
-
-
-
-
-
                             <!-- title -->
                             <h5 class="text-center my-3">iPhone 14 Pro</h5>
-
-
-
-
                         </div>
                         <ul class="list-group list-group-flush">
                             <div class="d-flex justify-content-around align-items-center my-3">
-
-
-
-
-
                                 <!-- price -->
                                 <p>$<span>1000</span></p>
-
-
-
-
                                 <!-- type brand -->
                                 <p><span class="typeInCard d-block">Apple</span></p>
-
-
-
-
                             </div>
                         </ul>
                         <div class="my-3 mx-sm-4 mx-2 d-flex justify-content-between align-items-center">
@@ -149,44 +118,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
-                <!-------------------------  Item----------------------------->
-                <div class="Mycard-item col-6 col-md-4  col-lg-3 mb-4">
-                    <div class="card" style="width: 100%;">
-                        <div class="Mycard-body">
-                            <div class="Mycard-body-describe">
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, in nemo! Assumenda
-                                    harum corrupti esse.</p>
-                            </div>
-                            <!-- image -->
-                            <img src="https://tanvoishop.com/files/sanpham/36/2/jpg/samsung-galaxy-a10s.jpg"
-                                class="round w-75 mx-auto d-block p-2">
-                            <!-- title -->
-                            <h5 class="text-center my-3">Samsung Galaxy A10s</h5>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <div class="d-flex justify-content-around align-items-center my-3">
-                                <!-- price -->
-                                <p>$<span id="price">10000</span></p>
-                                <!-- type brand -->
-                                <p><span class="typeInCard d-block">Samsung</span></p>
-                            </div>
-                        </ul>
-                        <div class="my-3 mx-sm-4 mx-2 d-flex justify-content-between align-items-center">
-                            <div class="Mycard-number  d-flex">
-                                <button class="btn-more" disabled><i class="fa fa-minus"></i></button>
-                                <input type="number" class="mx-1 text-center" id="" value="0">
-                                <button class="btn-less"><i class="fa fa-plus"></i></button>
-                            </div>
-                            <button class="Mycard-add "><i class="fa fa-cart-plus"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-
             </div>
         </div>
     </section>
@@ -201,7 +132,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body cart-popup-body">
-                        <div class="container-fluid">
+                        <div class="container-fluid" >
 
                             <div class="d-flex cart-popup-item mb-3">
                                 <img class=" me-sm-3"
@@ -283,7 +214,10 @@
         integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
         </script>
 
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
+    <script src="../models/cardItem.js"></script>
+    <script src="../services/itemAPI.js"></script>
     <script src="../controller/mainCustomer.js"></script>
     <script src="../controller/plusMinusButton.js"></script>
 
