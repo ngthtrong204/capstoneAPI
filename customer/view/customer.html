@@ -60,10 +60,8 @@
     <!-- SERVICES -->
     <section class="  services">
         <div class="container d-flex d-lg-block justify-content-between ">
-            <select class="form-select " aria-label="Default select example">
-                <option selected>All brand</option>
-                <option value="samsung">Samsung</option>
-                <option value="iphone">iPhone</option>
+            <select id="filterSelect" class="form-select text-capitalize" onchange="filterItem()" aria-label="Default select example">
+                //
             </select>
             <button class="mx-2  cart d-lg-none pe-3 ps-1 p-lg-0" data-bs-toggle="modal" data-bs-target="#modalId">
                 <i class="fa fa-shopping-cart"></i>
@@ -86,38 +84,7 @@
             <div class="row" id="mainContent">
 
 
-                <!-------------------------  Item----------------------------->
-                <div class="Mycard-item col-6 col-md-4  col-lg-3 mb-4">
-                    <div class="card" style="width: 100%;">
-                        <div class="Mycard-body">
-                            <div class="Mycard-body-describe">
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, in nemo! Assumenda
-                                    harum corrupti esse.</p>
-                            </div>
-                            <!-- image -->
-                            <img src="https://shopdunk.com/images/thumbs/0008734_iphone-14-pro-128gb.png"
-                                class="round w-75 mx-auto d-block p-2">
-                            <!-- title -->
-                            <h5 class="text-center my-3">iPhone 14 Pro</h5>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <div class="d-flex justify-content-around align-items-center my-3">
-                                <!-- price -->
-                                <p>$<span>1000</span></p>
-                                <!-- type brand -->
-                                <p><span class="typeInCard d-block">Apple</span></p>
-                            </div>
-                        </ul>
-                        <div class="my-3 mx-sm-4 mx-2 d-flex justify-content-between align-items-center">
-                            <div class="Mycard-number  d-flex">
-                                <button class="btn-more"><i class="fa fa-minus"></i></button>
-                                <input type="number" class="mx-1 text-center" id="001" value="0">
-                                <button class="btn-less"><i class="fa fa-plus"></i></button>
-                            </div>
-                            <button class="Mycard-add "><i class="fa fa-cart-plus"></i></button>
-                        </div>
-                    </div>
-                </div>
+               
             </div>
         </div>
     </section>
@@ -201,8 +168,7 @@
 
     <!-- FOOTER -->
     <footer>
-        <!-- social-->
-        <!-- info -->
+       
        
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
