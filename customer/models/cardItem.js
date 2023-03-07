@@ -1,19 +1,19 @@
 class Item{
-    constructor(id, name, price, image, describe, type){
+    constructor(id, name, price, img, description, type){
         this.id=id;
         this.name=name;
         this.price=price;
-        this.image=image;
-        this.describe=describe;
+        this.img=img;
+        this.description=description;
         this.type=type;
     }
 }
 
 class Cart{
-    constructor(id,name,image,price,quantity){
+    constructor(id,name,img,price,quantity){
         this.id=id;
         this.name=name;
-        this.image=image;
+        this.img=img;
         this.price=price;
         this.quantity=quantity;
     }

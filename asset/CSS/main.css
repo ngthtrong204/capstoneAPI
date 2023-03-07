@@ -168,7 +168,27 @@ header .navbar-brand {
   text-transform: capitalize;
 }
 
-.cart {
+@media screen and (min-width: 576px) {
+  .Mycard-body-img {
+    height: 167.3px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .Mycard-body-img {
+    height: 144.788px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .Mycard-body-img {
+    height: 175px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .Mycard-body-img {
+    height: 220px;
+  }
+}
+button.cart {
   position: relative;
   width: 40px;
   height: 40px;
@@ -180,7 +200,7 @@ header .navbar-brand {
   text-align: center;
   font-size: 25px;
 }
-.cart #cart-number {
+button.cart #cart-number, button.cart #cart-number-lg {
   position: absolute;
   width: 17px;
   height: 17px;

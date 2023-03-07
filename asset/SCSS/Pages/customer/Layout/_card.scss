@@ -53,3 +53,31 @@
         text-transform:capitalize ;
     }
 }
+@include responsive("sm"){
+    .Mycard-body{
+        &-img{
+            height: 167.3px;
+        }
+    }
+}
+@include responsive("md"){
+    .Mycard-body{
+        &-img{
+            height: 144.788px;
+        }
+    }
+}
+@include responsive("lg"){
+    .Mycard-body{
+            &-img{
+                height: 175px;
+            }
+    }
+}
+@include responsive("xl"){
+    .Mycard-body{
+            &-img{
+                height: 220px;
+            }
+    }
+}

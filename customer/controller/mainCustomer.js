@@ -1,4 +1,5 @@
 const URL = "https://63ecb8e4be929df00cb0ba50.mockapi.io/api/capstoneAPI";
+// const URL = "https://63f6e87eab76703b15c677f7.mockapi.io/api/products";
 getItem(URL)
 createOption()
 let cartList = getCartList()
@@ -19,8 +20,8 @@ function getItem(URL) {
                     item.id,
                     item.name,
                     item.price,
-                    item.image,
-                    item.describe,
+                    item.img,
+                    item.description,
                     item.type,
                 )
             })
@@ -75,11 +76,13 @@ function renderItem(items) {
             <div class="card" style="width: 100%;">
                 <div class="Mycard-body">
                     <div class="Mycard-body-describe">
-                        <p>${item.describe}</p>
+                        <p>${item.description}</p>
                     </div>
-                    <!-- image -->
-                    <img src="${item.image}"
+                    <!-- img -->
+                    <div class="Mycard-body-img">
+                        <img src="${item.img}"
                         class="round w-75 mx-auto d-block p-2">
+                    </div>
                     <!-- name -->
                     <h5 class="text-center my-3">${item.name}</h5>
                 </div>
@@ -140,7 +143,7 @@ function plusButtonInCart(id) {
 }
 function minusButtonInCart(id) {
     let quantity = minusButton(id)
-    if (quantity==0){
+    if (quantity == 0) {
         deleteItemInCart(id)
         return
     }
@@ -190,7 +193,7 @@ function getDataItem(id) {
                 const itemInCart = new Cart(
                     id,
                     response.data.name,
-                    response.data.image,
+                    response.data.img,
                     response.data.price,
                     quantity
                 )
@@ -218,16 +221,19 @@ function deleteItemInCart(id) {
 }
 
 //Hàm hiển thị số lượng sản phẩm trong giỏ hàng
-function quantityInCart(){
-    let quantity = cartList.reduce((result,item)=>{
+function quantityInCart() {
+    let quantity = cartList.reduce((result, item) => {
         return result + item.quantity
-    },0)
-    if (quantity==0){
-        getElement("#cart-number").style.display= "none";
+    }, 0)
+    if (quantity == 0) {
+        getElement("#cart-number").style.display = "none";
+        getElement("#cart-number-lg").style.display = "none";
         return
     }
-    getElement("#cart-number").style.display= "block";
+    getElement("#cart-number").style.display = "block";
     getElement("#cart-number").innerHTML = quantity;
+    getElement("#cart-number-lg").style.display = "block";
+    getElement("#cart-number-lg").innerHTML = quantity;
 }
 
 function renderItemInCart(cartList) {
@@ -236,7 +242,7 @@ function renderItemInCart(cartList) {
             result + `
             <div class="d-flex cart-popup-item mb-3">
             <img class=" me-sm-3"
-                src="${item.image}">
+                src="${item.img}">
             <div class=" d-flex flex-column my-auto align-items-left">
                 <h5 class="m-0">${item.name}</h5>
                 <p class="my-2">Giá: $${item.price}</p>
@@ -257,7 +263,7 @@ function renderItemInCart(cartList) {
     getElement("#cartContent").innerHTML = html;
 }
 
-function clearButton(){
+function clearButton() {
     localStorage.clear()
     cartList = []
     renderItemInCart(cartList)
@@ -266,11 +272,11 @@ function clearButton(){
 }
 
 
-function payButton(){
-    let payValue = cartList.reduce((result,item)=>{
+function payButton() {
+    let payValue = cartList.reduce((result, item) => {
         return result + Number(item.sumPrice())
-    },0)
-    alert("Số tiền bạn cần phải thanh toán là: "+payValue)
+    }, 0)
+    alert("Số tiền bạn cần phải thanh toán là: " + payValue)
     alert("Thanh toán thành công")
     clearButton()
 }
@@ -290,7 +296,7 @@ function getCartList() {
         cartList[i] = new Cart(
             item.id,
             item.name,
-            item.image,
+            item.img,
             item.price,
             item.quantity,
         )
