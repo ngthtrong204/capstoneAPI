@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"version":3,"sources":["../homepage/_homepage.scss","main.css"],"names":[],"mappings":"AAAA;EACI,sBAAA;ACCJ;;ADEA;EACI,2CAAA;EACA,sBAAA;EACA,SAAA;EACA,eAAA;EACA,gBAAA;EACA,gBAAA;EACA,cAAA;EACA,sBAAA;ACCJ;;ADEA;EACI,iBAAA;ACCJ;;ADCA;EACI,wCAAA;ACEJ;;ADAA;EACI,qBAAA;EACA,cAAA;ACGJ;;ADAA;EACI,6BAAA;ACGJ;;ADDA;EACI,YAAA;EACA,aAAA;EACA,mBAAA;EACA,uBAAA;EACA,kBAAA;EACA,iBAAA;EACA,YAAA;EACA,aAAA;EACA,8BAAA;EACA,mBAAA;EACA,qCAAA;EACA,eAAA;EACA,oBAAA;EACA,mBAAA;ACIJ","file":"main.css"}
+=======
+{"version":3,"sources":["../SCSS/Base/_reset.scss","main.css"],"names":[],"mappings":"AAAA;EACI,SAAA;EACA,UAAA;EACA,sBAAA;ACCJ","file":"main.css"}
+>>>>>>> main

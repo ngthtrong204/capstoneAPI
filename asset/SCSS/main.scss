@@ -1,2 +1,25 @@
+<<<<<<< HEAD
 
 @import '../homepage/homepage';
+=======
+@import "../SCSS/Base/reset";
+
+//ADMIN
+
+
+
+
+
+
+//CUSTOMER
+    //Helper
+@import "./Pages/customer/Helper/mixins";
+@import "./Pages/customer/Helper/variables";
+    //Layout
+@import "./Pages/customer/Layout/header";
+@import "./Pages/customer/Layout/service";
+@import "./Pages/customer/Layout/card";
+@import "./Pages/customer/Layout/footer";
+    //Compoinents
+@import "./Pages/customer/Components/cart";
+>>>>>>> main
