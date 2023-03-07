@@ -1,0 +1,22 @@
+.services {
+    padding-top: 95px;
+    
+    select {
+        width: 50vw;//responsive
+        background-color: #F0A04B;
+        border: none;
+
+        &:focus {
+            border: 2px solid $color-dark;
+            box-shadow: 0px 0px 0 $color-dark;
+        }
+    }
+    
+}
+@include responsive("sm"){
+    .services{
+        select{
+            width: 12rem;
+        }
+    }
+}

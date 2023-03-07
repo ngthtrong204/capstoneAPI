@@ -1,0 +1,83 @@
+.Mycard {
+    .card{
+        overflow: hidden;
+        h5{
+            // font-size: 4vw;
+            height: 40px;
+        }
+    }
+    &-body{
+        $transition:.4s;
+        $bg-color:rgba(255, 255, 255, 0.648);
+        position: relative;
+        overflow: hidden;
+        transition: $transition;
+        &-describe{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            transform: scale(0) ;
+            background-color: $bg-color;
+            transition: $transition;
+        }
+        &:hover &-describe{
+            transform: scale(1);
+
+        }
+      
+    }
+    &-add{
+        $border: 2px $color-yellow solid;
+        @include button(40px,39px,white,$border,5px,$color-yellow);
+        text-align: center;
+        font-size: 25px;
+        transition: .2s;
+        &:hover {
+            color: $color-yellow;
+            background-color: $color-black;
+        }
+    }
+
+    &-number{
+        @include plusMinus(50%,30px)
+    }
+    .typeInCard{
+        border: 1px solid transparent;
+        padding: 2px 8px;
+        border-radius: 5px;
+        background-color: $color-grey;
+        text-transform:capitalize ;
+    }
+}
+@include responsive("sm"){
+    .Mycard-body{
+        &-img{
+            height: 167.3px;
+        }
+    }
+}
+@include responsive("md"){
+    .Mycard-body{
+        &-img{
+            height: 144.788px;
+        }
+    }
+}
+@include responsive("lg"){
+    .Mycard-body{
+            &-img{
+                height: 175px;
+            }
+    }
+}
+@include responsive("xl"){
+    .Mycard-body{
+            &-img{
+                height: 220px;
+            }
+    }
+}

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@400;500;600;700;800&display=swap");
 * {
 <<<<<<< HEAD
   box-sizing: border-box;
@@ -50,5 +51,280 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+<<<<<<< HEAD
+}
+
+html, body {
+  font-family: "Shantell Sans", cursive, sans-serif;
+}
+
+body {
+  background-color: #FEFBE9;
+  color: #212529;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.color-black {
+  color: #212529;
+}
+
+.bg-color-black {
+  background-color: #212529;
+}
+
+.color-dark {
+  color: #183A1D;
+}
+
+.bg-color-dark {
+  background-color: #183A1D;
+}
+
+.color-light {
+  color: #FEFBE9;
+}
+
+.bg-color-light {
+  background-color: #FEFBE9;
+}
+
+.color-yellow {
+  color: #F0A04B;
+}
+
+.bg-color-yellow {
+  background-color: #F0A04B;
+}
+
+.color-grey {
+  color: #E1EEDD;
+}
+
+.bg-color-grey {
+  background-color: #E1EEDD;
+}
+
+header {
+  z-index: 2;
+  position: fixed;
+  height: 68px;
+  width: 100%;
+}
+header nav.navbar {
+  background-color: #183A1D;
+}
+header .navbar-brand {
+  letter-spacing: 5px;
+  font-size: 2rem;
+}
+
+.services {
+  padding-top: 95px;
+}
+.services select {
+  width: 50vw;
+  background-color: #F0A04B;
+  border: none;
+}
+.services select:focus {
+  border: 2px solid #183A1D;
+  box-shadow: 0px 0px 0 #183A1D;
+}
+
+@media screen and (min-width: 576px) {
+  .services select {
+    width: 12rem;
+  }
+}
+.Mycard .card {
+  overflow: hidden;
+}
+.Mycard .card h5 {
+  height: 40px;
+}
+.Mycard-body {
+  position: relative;
+  overflow: hidden;
+  transition: 0.4s;
+}
+.Mycard-body-describe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  transform: scale(0);
+  background-color: rgba(255, 255, 255, 0.648);
+  transition: 0.4s;
+}
+.Mycard-body:hover .Mycard-body-describe {
+  transform: scale(1);
+}
+.Mycard-add {
+  width: 40px;
+  height: 40px;
+  line-height: 39px;
+  color: white;
+  border: 2px #F0A04B solid;
+  border-radius: 5px;
+  background-color: #F0A04B;
+  text-align: center;
+  font-size: 25px;
+  transition: 0.2s;
+}
+.Mycard-add:hover {
+  color: #F0A04B;
+  background-color: #212529;
+}
+.Mycard-number {
+  width: 50%;
+}
+.Mycard-number button {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  color: #212529;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: #E1EEDD;
+  font-size: 13px;
+}
+.Mycard-number input {
+  width: 30px;
+  height: 30px;
+  line-height: 0;
+  color: #212529;
+  border: 1px solid transparent;
+  border-radius: 0px;
+  background-color: white;
+  width: 20%;
+}
+.Mycard-number input::-webkit-inner-spin-button,
+.Mycard-number input ::-webkit-outer-spin-button {
+  appearance: none;
+}
+.Mycard .typeInCard {
+  border: 1px solid transparent;
+  padding: 2px 8px;
+  border-radius: 5px;
+  background-color: #E1EEDD;
+  text-transform: capitalize;
+}
+
+@media screen and (min-width: 576px) {
+  .Mycard-body-img {
+    height: 167.3px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .Mycard-body-img {
+    height: 144.788px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .Mycard-body-img {
+    height: 175px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .Mycard-body-img {
+    height: 220px;
+  }
+}
+button.cart {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  line-height: 39px;
+  color: white;
+  border: 2px #183A1D solid;
+  border-radius: 5px;
+  background-color: #183A1D;
+  text-align: center;
+  font-size: 25px;
+}
+button.cart #cart-number, button.cart #cart-number-lg {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  line-height: 17px;
+  color: black;
+  border: solid 1px #F0A04B;
+  border-radius: 50%;
+  background-color: #F0A04B;
+  font-weight: 600;
+  top: 0%;
+  right: 0%;
+  font-size: 11px;
+  display: none;
+}
+
+.cart-popup-item img {
+  width: 30%;
+  margin: 0;
+}
+.cart-popup-item > div {
+  width: 55%;
+}
+.cart-popup-item > p {
+  width: 15%;
+}
+.cart-popup-item > p button {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  color: white;
+  border: solid 1px #F0A04B;
+  border-radius: 5px;
+  background-color: rgb(194, 70, 70);
+  transition: 0.3s;
+}
+.cart-popup-item > p button:hover {
+  color: rgb(194, 70, 70);
+  background-color: white;
+}
+.cart-popup-number {
+  width: 100%;
+}
+.cart-popup-number button {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  color: #212529;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: #E1EEDD;
+  font-size: 13px;
+}
+.cart-popup-number input {
+  width: 30px;
+  height: 30px;
+  line-height: 0;
+  color: #212529;
+  border: 1px solid transparent;
+  border-radius: 0px;
+  background-color: white;
+  width: 20%;
+}
+.cart-popup-number input::-webkit-inner-spin-button,
+.cart-popup-number input ::-webkit-outer-spin-button {
+  appearance: none;
+}
+
+@media screen and (min-width: 992px) {
+  .cart-popup-item > div {
+    width: 40%;
+  }
+  .cart-popup-item > p {
+    width: 30%;
+  }
+=======
+>>>>>>> main
 >>>>>>> main
 }/*# sourceMappingURL=main.css.map */

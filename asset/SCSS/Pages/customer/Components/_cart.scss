@@ -1,0 +1,59 @@
+button.cart {
+    position: relative;
+    $border: 2px $color-dark solid;
+    @include button(40px, 39px, white, $border, 5px, $color-dark);
+    text-align: center;
+    font-size: 25px;
+
+    #cart-number,#cart-number-lg {
+        position: absolute;
+        $border-number: solid 1px $color-yellow;
+        @include button(17px, 17px, black, $border-number, 50%, $color-yellow);
+        font-weight: 600;
+        top: 0%;
+        right: 0%;
+        font-size: 11px;
+        display: none;
+    }
+    
+}
+.cart-popup {
+    &-item {
+        img {
+            width: 30%;
+            margin: 0;
+        }
+        & > div {
+            width: 55%;
+        }
+        & > p {
+            width: 15%;
+            button {
+                $border: solid 1px $color-yellow;
+                @include button(30px, 30px, white, $border, 5px, rgb(194, 70, 70));
+                transition: .3s;
+                &:hover{
+                    color: rgb(194, 70, 70);
+                    background-color: white;
+                }
+            }
+        }
+    }
+
+    &-number {
+        @include plusMinus(100%, 30px);
+    }
+}
+@include responsive("lg"){
+    .cart-popup {
+        &-item {
+           
+            & > div {
+                width: 40%;
+            }
+            & > p {
+                width: 30%;
+            }
+        }
+    }
+}

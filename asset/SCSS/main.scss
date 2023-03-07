@@ -12,14 +12,21 @@
 
 
 //CUSTOMER
-    //Helper
+//Helper
 @import "./Pages/customer/Helper/mixins";
 @import "./Pages/customer/Helper/variables";
-    //Layout
+//Base
+@import "./Pages/customer/Base/customize";
+//Layout
 @import "./Pages/customer/Layout/header";
 @import "./Pages/customer/Layout/service";
 @import "./Pages/customer/Layout/card";
 @import "./Pages/customer/Layout/footer";
+<<<<<<< HEAD
+//Components
+@import "./Pages/customer/Components/cart";
+=======
     //Compoinents
 @import "./Pages/customer/Components/cart";
+>>>>>>> main
 >>>>>>> main

@@ -1,0 +1,33 @@
+@mixin button($width-height,$line-height,$color, $boder,$radius,$bg-color){
+    width: $width-height;
+    height: $width-height;
+    line-height: $line-height;
+    color: $color;
+    border: $boder;
+    border-radius: $radius;
+    background-color: $bg-color;
+}
+@mixin plusMinus($width,$height){
+    width: $width;
+    $height-box:$height;
+    $boder:1px solid transparent;
+    button{
+        @include button($height-box,$height-box,$color-black,$boder,5px,$color-grey);
+        font-size: 13px;
+    }
+    input{
+        @include button($height-box,0,$color-black,$boder,0px,white);
+        width: 20%;
+        &::-webkit-inner-spin-button,
+        ::-webkit-outer-spin-button {
+          appearance: none;
+        }
+    }
+}
+@mixin responsive($screen){
+    @if (map-has-key($map: $breakpoint, $key: $screen )){
+        @media screen and  (min-width: map-get($map: $breakpoint, $key: $screen )){
+            @content;
+        }
+    }
+}
