@@ -48,7 +48,7 @@
                                 data-bs-target="#modalId">
                                 <i class="fa fa-shopping-cart"></i>
                                 <!-- CART NUMBER -->
-                                <span id="cart-number">20</span>
+                                <span id="cart-number" ></span>
                             </button>
                         </li>
                     </ul>
@@ -60,8 +60,8 @@
     <!-- SERVICES -->
     <section class="  services">
         <div class="container d-flex d-lg-block justify-content-between ">
-            <select id="filterSelect" class="form-select text-capitalize" onchange="filterItem()" aria-label="Default select example">
-                //
+            <select id="filterSelect" class="form-select text-capitalize" onchange="filterItem()"
+                aria-label="Default select example">
             </select>
             <button class="mx-2  cart d-lg-none pe-3 ps-1 p-lg-0" data-bs-toggle="modal" data-bs-target="#modalId">
                 <i class="fa fa-shopping-cart"></i>
@@ -70,7 +70,7 @@
 
 
                 <!---------- CART NUMBER ---------->
-                <span id="cart-number">20</span>
+                <span id="cart-number"  ></span>
 
 
 
@@ -84,7 +84,7 @@
             <div class="row" id="mainContent">
 
 
-               
+
             </div>
         </div>
     </section>
@@ -99,51 +99,16 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body cart-popup-body">
-                        <div class="container-fluid" >
+                        <div class="container-fluid">
+                            <div id="cartContent">
 
-                            <div class="d-flex cart-popup-item mb-3">
-                                <img class=" me-sm-3"
-                                    src="https://shopdunk.com/images/thumbs/0008734_iphone-14-pro-128gb.png">
-                                <div class=" d-flex flex-column my-auto align-items-left">
-                                    <h5 class="m-0">iPhone 14 Pro</h5>
-                                    <p class="my-2">Giá: $1000</p>
-                                    <div class="cart-popup-number  d-flex">
-                                        <button class="btn-more"><i class="fa fa-minus"></i></button>
-                                        <input type="number" class="mx-1 text-center" id="" value="0">
-                                        <button class="btn-less"><i class="fa fa-plus"></i></button>
-                                    </div>
-                                </div>
-                                <p class="d-lg-flex my-auto  align-items-center">Tổng:
-                                    <span class="my-2 mx-lg-1 d-block">1000</span>
-                                    <button><i class="fa fa-trash-alt"></i></button>
-                                </p>
                             </div>
-
-                            <div class="d-flex cart-popup-item mb-3">
-                                <img class=" me-sm-3"
-                                    src="https://shopdunk.com/images/thumbs/0008734_iphone-14-pro-128gb.png">
-                                <div class=" d-flex flex-column my-auto align-items-left">
-                                    <h5 class="m-0">iPhone 14 Pro</h5>
-                                    <p class="my-2">Giá: $1000</p>
-                                    <div class="cart-popup-number  d-flex">
-                                        <button class="btn-more"><i class="fa fa-minus"></i></button>
-                                        <input type="number" class="mx-1 text-center" id="" value="0">
-                                        <button class="btn-less"><i class="fa fa-plus"></i></button>
-                                    </div>
-                                </div>
-                                <p class="d-lg-flex my-auto  align-items-center">Tổng:
-                                    <span class="my-2 mx-lg-1 d-block">1000</span>
-                                    <button><i class="fa fa-trash-alt"></i></button>
-                                </p>
-                            </div>
-
-
                         </div>
                     </div>
                     <div class="modal-footer cart-popup-btn">
                         <button class="btn bg-color-black color-grey" data-bs-dismiss="modal">Close</button>
-                        <button class="btn bg-color-dark color-grey">Clear</button>
-                        <button class="btn bg-color-yellow">Pay</button>
+                        <button class="btn bg-color-dark color-grey" onclick="clearButton()">Clear</button>
+                        <button class="btn bg-color-yellow" onclick="payButton()">Pay</button>
                     </div>
                 </div>
             </div>
@@ -168,8 +133,8 @@
 
     <!-- FOOTER -->
     <footer>
-       
-       
+
+
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -180,7 +145,7 @@
         integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
         </script>
 
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     <script src="../models/cardItem.js"></script>
     <script src="../services/itemAPI.js"></script>
