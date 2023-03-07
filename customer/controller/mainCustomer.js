@@ -1,5 +1,5 @@
-const URL = "https://63ecb8e4be929df00cb0ba50.mockapi.io/api/capstoneAPI";
-// const URL = "https://63f6e87eab76703b15c677f7.mockapi.io/api/products";
+// const URL = "https://63ecb8e4be929df00cb0ba50.mockapi.io/api/capstoneAPI";
+const URL = "https://63f6e87eab76703b15c677f7.mockapi.io/api/products";
 getItem(URL)
 createOption()
 let cartList = getCartList()
