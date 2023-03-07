@@ -1,289 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Admin Page</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="../css/admin.css">
-  </head>
 
-  <body>
-    <div class="container">
-      <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
-        <a class="navbar-brand" href="#">Cyber Phone</a>
-        <button
-          class="navbar-toggler d-lg-none"
-          type="button"
-          data-toggle="collapse"
-          data-target="#collapsibleNavId"
-          aria-controls="collapsibleNavId"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        ></button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-              <a class="nav-link" href="http://127.0.0.1:5501/DUY/capstoneAPI/index.html"
-                >Home <span class="sr-only">(current)</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Store</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="dropdownId"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-                >Dropdown</a
-              >
-              <div class="dropdown-menu" aria-labelledby="dropdownId">
-                <a class="dropdown-item" href="#">Action 1</a>
-                <a class="dropdown-item" href="#">Action 2</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Admin Page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <!-- <link rel="stylesheet" href="../css/admin.css"> -->
+  <style>
+    .sp-thongbao {
+      color: red;
+      margin-left: 2px;
+    }
+  </style>
+</head>
 
-      <header class="display-4 my-4">
-        Phone Management
-      </header>
-      <!-- Phan tab menu -->
-      <ul class="nav nav-tabs" role="tablist">
-        <li class="nav-item">
-          <a
-            class="nav-link active"
-            href="#DanhSachSP"
-            role="tab"
-            data-toggle="tab"
-            >Danh sách sản phẩm</a
-          >
-        </li>
-        
-      </ul>
-      <br />
-      <!-- Tab panes -->
-      <div class="tab-content">
-        <!--Danh sách sản phẩm -->
-        <div role="tabpanel" class="tab-pane  in active" id="DanhSachSP">
-          <div class="row">
-            <div class="col-md-8">
-              <!-- BEGIN BUTTOM THÊM MỚI -->
-              <button
-                id="btnThemSP"
-                class="btn btn-success"
-                data-toggle="modal"
-                data-target="#myModal"
-              >
-                <i class="fa fa-plus mr-1"></i>
-                Add Phone
-              </button>
-              <button
-                id="btnTangSP"
-                class="btn btn-success ml-4"
-                onclick="priceUpProducts()"
-                
-              >
-                
-                Giá tăng dần
-              </button>
-              <button
-              id="btnGiamSP"
-              class="btn btn-success ml-4"
-              onclick="priceDownProducts()"
-              
-            >
-              
+<body>
+  <div class="container">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+      <a class="navbar-brand" href="#">Cyber Phone</a>
+      <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+        aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="../../index.html">Home <span
+                class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../customer/view/customer.html">Store</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+              <a class="dropdown-item" href="#">Action 1</a>
+              <a class="dropdown-item" href="#">Action 2</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <header class="display-4 my-4">
+      Phone Management
+    </header>
+    <!-- Phan tab menu -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" href="#DanhSachSP" role="tab" data-toggle="tab">Danh sách sản phẩm</a>
+      </li>
+
+    </ul>
+    <br />
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <!--Danh sách sản phẩm -->
+      <div role="tabpanel" class="tab-pane  in active" id="DanhSachSP">
+        <div class="row">
+          <div class="col-md-8">
+            <!-- BEGIN BUTTOM THÊM MỚI -->
+            <button id="btnThemSP" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+              <i class="fa fa-plus mr-1"></i>
+              Add Phone
+            </button>
+            <button id="btnTangSP" class="btn btn-success ml-4" onclick="priceUpProducts()">
+
+              Giá tăng dần
+            </button>
+            <button id="btnGiamSP" class="btn btn-success ml-4" onclick="priceDownProducts()">
+
               Giá giảm dần
             </button>
-              <!-- END BUTTON THÊM MỚI -->
-            </div>
-            <div class="col-md-4">
-              <!-- BEGIN TÌM KIẾM -->
-              <div class="input-group mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Nhập từ khóa"
-                  id="txtSearch"
-                  aria-label="Recipient's username"
-                  aria-describedby="basic-addon2"
-                />
-                <div class="input-group-append">
-                  <span class="input-group-text" id="basic-addon2"
-                    ><i class="fa fa-search"></i
-                  ></span>
-                </div>
+            <!-- END BUTTON THÊM MỚI -->
+          </div>
+          <div class="col-md-4">
+            <!-- BEGIN TÌM KIẾM -->
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Nhập từ khóa" id="txtSearch"
+                aria-label="Recipient's username" aria-describedby="basic-addon2" />
+              <div class="input-group-append">
+                <span class="input-group-text" id="basic-addon2"><i class="fa fa-search"></i></span>
               </div>
-              <!-- END TÌM KIẾM -->
             </div>
+            <!-- END TÌM KIẾM -->
           </div>
-          <div class="clear-fix"></div>
-          <div class="tblSanPham" id="tblSanPham">
-            <!-- BEGIN TABLE SẢN PHẨM -->
-            <table class="table table-bordered">
-              <thead>
-                <th>#</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Photo</th>
-                <th>Discription</th>                
-                <th>Action</th>
-              </thead>
-              <tbody id="tblDanhSachSP"></tbody>
-            </table>
-            <!-- END TABLE SẢN PHẨM -->
-          </div>
-          <br />
         </div>
-        <!-- Kết thúc danh sách sản phẩm -->       
+        <div class="clear-fix"></div>
+        <div class="tblSanPham" id="tblSanPham">
+          <!-- BEGIN TABLE SẢN PHẨM -->
+          <table class="table table-bordered">
+            <thead>
+              <th>#</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Photo</th>
+              <th>Discription</th>
+              <th>Action</th>
+            </thead>
+            <tbody id="tblDanhSachSP"></tbody>
+          </table>
+          <!-- END TABLE SẢN PHẨM -->
+        </div>
+        <br />
       </div>
+      <!-- Kết thúc danh sách sản phẩm -->
+    </div>
 
-      <!--KetThuc Tabmenu-->
+    <!--KetThuc Tabmenu-->
 
-      <!-- The Modal -->
-      <div class="modal fade" id="myModal">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <!-- Modal Header -->
-            <div class="modal-header">
-              <h4 class="modal-title">Phone Management</h4>
-              <button type="button" class="close" data-dismiss="modal">
-                &times;
-              </button>
+    <!-- The Modal -->
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Phone Management</h4>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="form-group">
+
+              <input id="TenSP" class="form-control" placeholder="Phone name" />
             </div>
-            <!-- Modal body -->
-            <div class="modal-body">
-              <div class="form-group">
-                
-                <input
-                  id="TenSP"
-                  class="form-control"
-                  placeholder="Phone name"
-                />
-              </div>
-              <span class="sp-thongbao" id="tbname"></span>
-              <div class="form-group">
-                
-                <input type="number"
-                  id="GiaSP"
-                  class="form-control"
-                  placeholder="Price"
-                />
-              </div>
-              <span  class="sp-thongbao" id="tbprice"></span>             
-              <div class="form-group">
-                
-                <input
-                  id="ManHinhSP"
-                  class="form-control"
-                  placeholder="Screen"
-                />
-              </div>
-              <span  class="sp-thongbao" id="tbscreen"></span>
-              <div class="form-group">
-                
-                <input
-                  id="BackSP"
-                  class="form-control"
-                  placeholder="Back Camera"
-                />
-              </div>
-              <span  class="sp-thongbao" id="tbback"></span>
-              <div class="form-group">
-               
-                <input
-                  id="FrontSP"
-                  class="form-control"
-                  placeholder="Front Camera"
-                />
-              </div>
-              <span  class="sp-thongbao" id="tbfront"></span>
-              <div class="form-group">
-                
-                <input
-                  id="ImgSP"
-                  class="form-control"
-                  placeholder="Image Link"
-                />
-              </div>
-              <span  class="sp-thongbao" id="tbimg"></span>
-              <div class="form-group">
-               
-                <input
-                  id="DesSP"
-                  class="form-control"
-                  placeholder="Description"
-                />
-              </div>
-              <span  class="sp-thongbao" id="tbdes"></span>
-              
-             
-              <div class="form-group">
-                
-                <select class="form-control" id="loaiSP">
-                  <option value="phone">Select brand</option>
-                  <option value="laptop">Apple</option>
-                  <option value="other">Samsung</option>
-                </select>
-              </div>
-              <span  class="sp-thongbao" id="tbtype"></span>
+            <span class="sp-thongbao" id="tbname"></span>
+            <div class="form-group">
+
+              <input type="number" id="GiaSP" class="form-control" placeholder="Price" />
             </div>
-            <!-- Modal footer -->
-            <div class="modal-footer">
-              <!-- <button id="btnAddPhone" type="button" class="btn btn-success">Add Phone</button>
+            <span class="sp-thongbao" id="tbprice"></span>
+            <div class="form-group">
+
+              <input id="ManHinhSP" class="form-control" placeholder="Screen" />
+            </div>
+            <span class="sp-thongbao" id="tbscreen"></span>
+            <div class="form-group">
+
+              <input id="BackSP" class="form-control" placeholder="Back Camera" />
+            </div>
+            <span class="sp-thongbao" id="tbback"></span>
+            <div class="form-group">
+
+              <input id="FrontSP" class="form-control" placeholder="Front Camera" />
+            </div>
+            <span class="sp-thongbao" id="tbfront"></span>
+            <div class="form-group">
+
+              <input id="ImgSP" class="form-control" placeholder="Image Link" />
+            </div>
+            <span class="sp-thongbao" id="tbimg"></span>
+            <div class="form-group">
+
+              <input id="DesSP" class="form-control" placeholder="Description" />
+            </div>
+            <span class="sp-thongbao" id="tbdes"></span>
+
+
+            <div class="form-group">
+
+              <select class="form-control" id="loaiSP">
+                <option value="phone">Select brand</option>
+                <option value="Apple">Apple</option>
+                <option value="Samsung">Samsung</option>
+              </select>
+            </div>
+            <span class="sp-thongbao" id="tbtype"></span>
+          </div>
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <!-- <button id="btnAddPhone" type="button" class="btn btn-success">Add Phone</button>
               <button id="btnUpDatePhone" type="button" class="btn btn-success">Update Phone</button> -->
-            </div>
           </div>
         </div>
       </div>
     </div>
-    <div id="container"></div>
-    <style>
-      #container {
-        min-width: 310px;
-        max-width: 800px;
-        height: 400px;
-        margin: 0 auto;
-      }
-    </style>
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/series-label.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    
-    <script src="../models/Product.js"></script>
-    <script src="../services/productAPI.js"></script>
-    <script src="../controller/main.js"></script>
-  </body>
+  </div>
+  <div id="container"></div>
+  <style>
+    #container {
+      min-width: 310px;
+      max-width: 800px;
+      height: 400px;
+      margin: 0 auto;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/series-label.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+  <script src="../models/Product.js"></script>
+  <script src="../services/productAPI.js"></script>
+  <script src="../controller/main.js"></script>
+</body>
+
 </html>
